@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - lcdb_vbo
+  module:
+    - lcdb_vbo
+id: lcdb_vbo_mark_asgt
+label: 'Some action'
+type: kids_data
+plugin: "lcdb_vbo_mark_asgt"
+configuration: {  }

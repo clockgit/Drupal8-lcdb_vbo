@@ -1,0 +1,9 @@
+name: 'lcdb vbo'
+type: module
+description: 'Views Bulk Operations for lcdb'
+core: 8.x
+package: 'lcdb'
+dependencies:
+  - drupal:lcdb
+  - drupal:views_bulk_operations
+  - drupal:vbo_export

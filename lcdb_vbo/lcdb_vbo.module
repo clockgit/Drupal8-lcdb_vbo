@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * @file
+ * Contains lcdb_vbo.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function lcdb_vbo_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the lcdb_vbo module.
+    case 'help.page.lcdb_vbo':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Views Bulk Operations for lcdb') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function lcdb_vbo_theme() {
+  return [
+    'lcdb_vbo_export_content_csv' => [
+      'variables' => [
+        'header' => [],
+        'rows' => [],
+        'first_row' => [],
+        'last_row' => [],
+        'configuration' => [
+          'separator' => ';',
+          'strip_tags' => TRUE,
+        ],
+      ],
+      'file' => 'includes/lcdb_vbo_export.theme.inc',
+
+      // I know this is deprecated.
+      // However if I don't set it Drupal looks for a
+      // template and doesn't even think of finding the function.
+      'function' => 'theme_lcdb_vbo_export_content_csv',
+    ]
+  ];
+}

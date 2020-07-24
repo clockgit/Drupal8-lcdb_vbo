@@ -1,0 +1,13 @@
+{
+    "name": "lcdb_vbo",
+    "type": "drupal-module",
+    "description": "Views Bulk Operations for lcdb",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/lcdb_vbo",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/lcdb_vbo",
+        "source": "http://cgit.drupalcode.org/lcdb_vbo",
+    },
+}
